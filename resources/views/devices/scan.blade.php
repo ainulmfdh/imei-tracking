@@ -68,15 +68,18 @@
 </div>
 
 <!-- FIX KHUSUS html5-qrcode -->
-<style>
-#reader video {
-    width: 100% !important;
-    height: auto !important;
+<<style>
+#reader {
+    width: 100%;
+    max-height: 40vh;
     border-radius: 12px;
 }
 
-#reader {
-    max-height: 260px;
+#reader video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 12px;
 }
 </style>
 

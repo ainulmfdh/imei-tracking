@@ -85,5 +85,5 @@ class DeviceController extends Controller
         ]);
 
         return redirect()->back()->with('success','HP Keluar berhasil');
-    }
+    }    
 }

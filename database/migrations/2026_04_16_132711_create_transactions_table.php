@@ -13,8 +13,8 @@ return new class extends Migration
     {
        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('imei');
-            $table->enum('type', ['masuk','keluar']);
+            $table->string('imei', 15);
+            $table->enum('type', ['masuk', 'keluar']);
             $table->string('petugas');
             $table->timestamps();
         });
