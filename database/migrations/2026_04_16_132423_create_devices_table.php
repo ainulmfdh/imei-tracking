@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
-            $table->string('imei')->unique();
-            $table->string('user_name');
-            $table->string('location');
-            $table->string('status')->default('available');
+            $table->string('imei', 15)->unique();
+            $table->string('user_name')->nullable();
+            $table->string('location')->nullable();
+            // Default awal 'tersedia', jika di-scan jadi 'terpakai'
+            $table->enum('status', ['tersedia', 'terpakai'])->default('tersedia');
             $table->timestamps();
         });
     }

@@ -22,20 +22,6 @@ class DeviceController extends Controller
         return view('devices.scan');
     }
 
-    // public function find(Request $request)
-    // {
-    //     $device = Device::where('imei',$request->imei)->first();
-    //     return response()->json($device);
-
-    //      $imei = preg_replace('/\D/', '', $request->imei);
-
-    //     $data = DB::table('devices')
-    //         ->where('imei', $imei)
-    //         ->first();
-
-    //     return response()->json($data);
-    // }
-
     public function find(Request $request)
     {
         try {
@@ -99,5 +85,5 @@ class DeviceController extends Controller
         ]);
 
         return redirect()->back()->with('success','HP Keluar berhasil');
-    }
+    }    
 }
