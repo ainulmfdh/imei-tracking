@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('imei')->unique();
             $table->string('user_name');
             $table->string('location');
-            $table->string('status')->default('available');
+            // Default awal 'tersedia', jika di-scan jadi 'terpakai'
+            $table->enum('status', ['Tersedia', 'Terpakai'])->default('Tersedia');
             $table->timestamps();
         });
     }
