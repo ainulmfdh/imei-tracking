@@ -197,5 +197,6 @@ startScanner();
 
 });
 </script>
+{{-- test --}}
 
 </x-app-layout>
